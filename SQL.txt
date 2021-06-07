@@ -1,0 +1,115 @@
+create table vidyastudent(regno number,name varchar2(20),address varchar2(20),phoneno number)
+
+insert into vidyastudent values(102,'Karthik','Mathikere',8197256537);
+
+insert into vidyastudent values(103,'Thiru','RTNagar',98441998441);
+
+insert into vidyastudent values(104,'Ramesh','SanjayNagar',8714987149);
+
+select * from  vidyastudent;
+
+update vidyastudent set address='MSRIT' where regno=104;  
+ 
+select * from  vidyastudent;
+
+alter table vidyastudent add DOB date;
+
+update vidyastudent set dob='10-oct-2000' where regno=104;
+
+Delete vidyastudent where regno=104;
+
+desc vidyastudent
+
+select * from vidyastudent;
+
+truncate table vidyastudent
+
+drop table vidyastudent
+----------------------------------------------------------------------------------------------
+create table studentvidya (rollno number,name varchar2(30),phy number,chem number,bio number);
+
+insert into studentvidya values(103,'praven',78,85,97);
+
+select * from studentvidya;
+
+alter table studentvidya add total number;
+
+alter table studentvidya add avg number;
+
+alter table studentvidya add grade varchar2(30);
+
+update studentvidya set total=phy+chem+bio where rollno in(101,102,103)
+
+update studentvidya set avg=total/3;
+
+update studentvidya set grade='First Division' where avg>70;
+
+update studentvidya set grade='second Division' where avg<70;
+------------------------------------------------------------------------------------------------
+constrains:-
+1)primary key:- if we make a column as primary key we cannot enter duplicate value and we cannot enter null value.
+or keep that column empty.
+
+2)unique key:- if we make a column as unique we cannot enter duplicate values.
+
+3)not null:- if we make a column as not null we cannot  enter null value or keep it empty.
+
+4)check :- we can give limitation to the column.(example:- salary should be greater than 15000,mark should be greater than zero.
+----------------------------------------------------------------------------------------------------------------------------------
+
+create table vidyaemployee(empno number primary key,name varchar2(30) not null,address varchar2(30) unique,salary number check(salary >15000));
+
+insert into vidyaemployee values(102,'sandip','hyderabad',19000); 
+
+insert into vidyaemployee(name,empno,salary) values('sunil',104,25000);
+
+select * from vidyaemployee;
+
+EMPNO	NAME	ADDRESS	   SALARY
+102	sandip	hyderabad  19000
+103	Kiran	chennei	   25000
+104	sunil	-	   25000
+---------------------------------------------------------------------------------------------------------------------------
+assignment:-
+-------------------
+create table vidyaemployee2(empno number ,name varchar2(30),address varchar2(30),salary number ,HRA number,ta number,da number,medicin number,itax number,gross number);
+
+insert into vidyaemployee2(empno,name,address,salary)values(103,'praveen','bangalore',19500);
+
+select * from vidyaemployee2
+
+EMPNO	NAME	ADDRESS	   SALARY	
+103	praveen	bangalore  19500
+
+update vidyaemployee2 set HRA=salary*.10;
+
+update vidyaemployee2 set TA=salary*.15; 
+
+update vidyaemployee2 set DA=salary*.05; 
+
+update vidyaemployee2 set medicin=salary*.10;  
+
+update vidyaemployee2 set itax=salary*.20; 
+
+update vidyaemployee set gross=(salary+hra+ta+da+medicin)-itax;
+
+select * from vidyaemployee2
+EMPNO	NAME	ADDRESS	        SALARY	HRA	TA	DA    MEDICIN	ITAX	GROSS
+103	praveen	bangalore	19500	1950	2925	975   1950	3900	23400
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+		-
+
+
+
+
+
+
+
+
+
+
+
+
