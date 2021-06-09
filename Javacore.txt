@@ -1,0 +1,175 @@
+package Tuesday;
+import java.lang.*;//default package in java 
+import java.util.*;
+public class First 
+{ 
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter 2 nos");
+		Scanner ob=new Scanner(System.in);
+		int a=ob.nextInt();
+		int b=ob.nextInt();
+		if(a>b)
+			System.out.println("the greatest is "+a);
+		else
+			System.out.println("the greatest is" +b);
+	}
+}
+
+output:Enter the 2no's
+5
+10
+the greater is 10
+------------------------------------------------------------------------------
+import java.lang.*;//default package in java 
+import java.util.*;
+public class First 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter 3 nos");
+		Scanner ob=new Scanner(System.in);
+		int a=ob.nextInt();
+		int b=ob.nextInt();
+		int c=ob.nextInt();
+			if(a>b && a>c)
+			System.out.println("the greatest is "+a);
+		else if(b>a && b>c)
+			System.out.println("the greatest is" +b);
+		else
+			System.out.println("the greatest is" +c);
+	}
+}
+output: Enter 3no's
+3
+6
+9
+the Greatest is 9
+-----------------------------------------------------------------------------
+import java.lang.*;//default package in java 
+import java.util.*;
+public class First //class contain variables and methods  
+{
+	int rollno;
+	String name,address;
+	public void input()
+	{
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter rollno,name,address");
+		rollno=ob.nextInt();
+		name=ob.next();
+		address=ob.next();
+	}
+	public void display()
+	{
+		System.out.println("the rollno is"+rollno);
+		System.out.println("the name is"+name);
+		System.out.println("the address is"+address);
+		}
+	public static void main(String[] args) 
+	{
+	First obj=new First();
+	obj.input();
+	obj.display();
+	}
+}
+output: Enter rollno name     address
+              101    Karthik  Bangalore
+----------------------------------------------------------------------------
+import java.lang.*;
+import java.util.*;
+
+public class Third {
+	int empno,salary;
+	String name,address;
+	
+		public void input()
+		{
+			Scanner ob=new Scanner(System.in);
+			System.out.println("Enter rollno,name,address,salary");
+			empno=ob.nextInt();
+			name=ob.next();
+			address=ob.next();
+			salary=ob.nextInt();
+		}
+		public void display()
+		{
+			System.out.println("The rollno is "+empno);
+			System.out.println("The Name is "+name);
+			System.out.println("The Address is "+address);
+			System.out.println("The Salary is "+salary);
+		}
+	
+	public static void main(String[] args) {
+		Third obj=new Third();
+		 obj.input();
+		 obj.display();
+	}	
+}
+import java.lang.*;
+import java.util.*;
+
+public class Third {
+	int empno,salary;
+	String name,address;
+	
+		public void input()
+		{
+			Scanner ob=new Scanner(System.in);
+			System.out.println("Enter rollno,name,address,salary");
+			empno=ob.nextInt();
+			name=ob.next();
+			address=ob.next();
+			salary=ob.nextInt();
+		}
+		public void display()
+		{
+			System.out.println("The rollno is "+empno);
+			System.out.println("The Name is "+name);
+			System.out.println("The Address is "+address);
+			System.out.println("The Salary is "+salary);
+		}
+	
+	public static void main(String[] args) {
+		Third obj=new Third();
+		 obj.input();
+		 obj.display();
+	}	
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.lang.*;
+import java.util.*;
+
+public class Third {
+	int empno,salary;
+	String name,address;
+	
+		public void input()
+		{
+			Scanner ob=new Scanner(System.in);
+			System.out.println("Enter rollno,name,address,salary");
+			empno=ob.nextInt();
+			name=ob.next();
+			address=ob.next();
+			salary=ob.nextInt();
+		}
+		public void display()
+		{
+			System.out.println("The rollno is "+empno);
+			System.out.println("The Name is "+name);
+			System.out.println("The Address is "+address);
+			System.out.println("The Salary is "+salary);
+		}
+	
+	public static void main(String[] args) {
+		Third obj=new Third();
+		 obj.input();
+		 obj.display();
+	}
+}
+OUTPUT:
+The rollno is 101
+The Name is Karthik B N
+The Address is MATHIKERE
+The Salary is 30000	
+}
